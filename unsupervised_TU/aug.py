@@ -173,7 +173,7 @@ class TUDataset_aug(InMemoryDataset):
         print(read_tu_data(self.raw_dir, self.name))
         print(type(read_tu_data(self.raw_dir, self.name)))
         print(len(read_tu_data(self.raw_dir, self.name)))
-        self.data, self.slices = read_tu_data(self.raw_dir, self.name)
+        self.data, self.slices, self.info1 = read_tu_data(self.raw_dir, self.name)
 
         if self.pre_filter is not None:
             data_list = [self.get(idx) for idx in range(len(self))]
