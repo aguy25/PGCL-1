@@ -30,7 +30,7 @@ import torch.optim
 from src.utils import (
     AverageMeter,
 )
-from unsupervised_TU.tsne import *
+from tsne import *
 
 class MultiPrototypes(nn.Module):
     def __init__(self, output_dim, nmb_prototypes):
