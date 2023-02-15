@@ -170,6 +170,7 @@ class TUDataset_aug(InMemoryDataset):
         os.rename(osp.join(folder, self.name), self.raw_dir)
 
     def process(self):
+        print(read_tu_data(self.raw_dir, self.name))
         self.data, self.slices = read_tu_data(self.raw_dir, self.name)
 
         if self.pre_filter is not None:
