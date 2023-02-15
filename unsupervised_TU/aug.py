@@ -171,6 +171,8 @@ class TUDataset_aug(InMemoryDataset):
 
     def process(self):
         print(read_tu_data(self.raw_dir, self.name))
+        print(type(read_tu_data(self.raw_dir, self.name)))
+        print(len(read_tu_data(self.raw_dir, self.name)))
         self.data, self.slices = read_tu_data(self.raw_dir, self.name)
 
         if self.pre_filter is not None:
